@@ -58,6 +58,7 @@ export class DynamicComponentLoader {
     componentId: string,
     injector?: Injector
   ): Observable<ComponentFactory<T>> {
+    //debugger;
     const manifest = this.manifests.find(m => m.componentId === componentId);
     if (!manifest) {
       return throwError(

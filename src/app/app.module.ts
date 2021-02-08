@@ -19,6 +19,11 @@ const manifests: DynamicComponentManifest[] = [
     loadChildren: () => import('./dynamic-modules/message/message.module').then(m => m.MessageModule)
   },
   {
+    componentId: 'danish-body-org',
+    path: 'dynamic-danish-body-org', // some globally-unique identifier, used internally by the router
+    loadChildren: () => import('./dynamic-modules/danish-body-org/danish-body-org.module').then(m => m.DanishBodyOrgModule)
+  },
+  {
     componentId: 'dialog',
     path: 'dialog',
     loadChildren: () => import('./dynamic-modules/dialog/dialog.module').then(m => m.DialogModule)
